@@ -41,7 +41,7 @@ def call():
         app.logger.error(e)
         return jsonify({'error': str(e)})
 
-    return jsonify({'message': 'Call incoming!'})
+    return jsonify({'message': 'Pick up your phone!'})
 
 
 @app.route('/outbound', methods=['POST'])
@@ -50,8 +50,9 @@ def outbound():
 
     response.say("Thank you for calling here for reentry baltimore's ringdown application."
                  " Please introduce yourself and remember that these volunteers are here to help."
+                 "If you are sent to voice mail, record a message then press star or pound in order to continue looking for help."
                  " You will now be connected with a returning citizen voulenteer.",
-                 voice='alice')
+                 voice='man')
     
     # Uncomment this code and replace the number with the number you want
     # your customers to call.
